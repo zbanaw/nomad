@@ -10,20 +10,20 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :coach_id %>
-    <%= form.text_field :coach_id %>
-  </div>
-
+  
   <div class="field">
     <%= form.label :user_name %>
     <%= form.text_field :user_name %>
   </div>
 
   <div class="field">
+    <%= form.label :coach_id %>
+    <%= form.select :coach_id, Coach.all.collect { |c| [ c.name, c.id ] } %>
+  </div>
+
+  <div class="field">
     <%= form.label :time_slot %>
-    <%= form.time_select :time_slot %>
+    <%= form.select :time_slot, AvailableTime.first.time_slot_array.map { |t| [ t, t ] } %>
   </div>
 
   <div class="actions">
