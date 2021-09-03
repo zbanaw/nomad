@@ -16,12 +16,9 @@
       <tr>
         <td><%= coach.name %></td>
         <td><%= coach.timezone %></td>
-        <td><%= link_to 'Show', coach %></td>
-        <td><%= link_to 'Edit', edit_coach_path(coach) %></td>
-        <td><%= link_to 'Destroy', coach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
       <tr>
-        <td colspan="5">
+        <td colspan="2">
           <table class="table mb-0">
             <thead>
               <tr>
@@ -46,7 +43,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Coach', new_coach_path %>

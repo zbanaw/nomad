@@ -6,19 +6,13 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+ruby-2.7.2
 
-* System dependencies
+* Database creation and seed with Coaches and their Available Times
+rails db:create
+rails db:seed
 
-* Configuration
+* Learned / To Overcome Things:
+Use dateTime instead of Time in database to keep daylight saving time for zones
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Appointments will also need the day of the week to select different options

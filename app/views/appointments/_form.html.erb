@@ -10,23 +10,23 @@
       </ul>
     </div>
   <% end %>
-  
+
   <div class="field">
-    <%= form.label :user_name %>
-    <%= form.text_field :user_name %>
+    <%= form.label :user_name, class: "form-label" %>
+    <%= form.text_field :user_name, class: "form-control" %>
   </div>
 
   <div class="field">
-    <%= form.label :coach_id %>
-    <%= form.select :coach_id, Coach.all.collect { |c| [ c.name, c.id ] } %>
+    <%= form.label :coach_id, class: "form-label" %>
+    <%= form.select :coach_id, Coach.all.collect { |c| [ c.name, c.id ] }, {}, { class: "form-select"} %>
   </div>
 
   <div class="field">
-    <%= form.label :time_slot %>
-    <%= form.select :time_slot, AvailableTime.first.time_slot_array.map { |t| [ t, t ] } %>
+    <%= form.label :time_slot, class: "form-label" %>
+    <%= form.select :time_slot, AvailableTime.first.time_slot_array.map { |t| [ t, t ] }, {}, { class: "form-select"} %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>
