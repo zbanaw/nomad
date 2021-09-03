@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  coach: one
+  day_of_week: 1
+  start: 2021-09-02 15:16:33
+  end: 2021-09-02 15:16:33
+
+two:
+  coach: two
+  day_of_week: 1
+  start: 2021-09-02 15:16:33
+  end: 2021-09-02 15:16:33
