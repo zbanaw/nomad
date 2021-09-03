@@ -20,6 +20,29 @@
         <td><%= link_to 'Edit', edit_coach_path(coach) %></td>
         <td><%= link_to 'Destroy', coach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+      <tr>
+        <td colspan="5">
+          <table>
+            <thead>
+              <tr>
+                <th>Day of the Week</th>
+                <th>Available At</th>
+                <th>Available Until</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% coach.available_times.each do |times| %>
+                <tr>
+                  <td><%= Date::DAYNAMES[times.day_of_week] %></td>
+                  <td><%= times.start.in_time_zone(coach.timezone).strftime("%l:%M %p") %></td>
+                  <td><%= times.end.in_time_zone(coach.timezone).strftime("%l:%M %p") %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </td>
+      </tr>
     <% end %>
   </tbody>
 </table>
