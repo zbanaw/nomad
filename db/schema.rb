@@ -10,33 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_03_040329) do
+ActiveRecord::Schema.define(version: 2021_09_03_055218) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "appointments", force: :cascade do |t|
     t.bigint "coach_id", null: false
-    t.time "time_slot"
+    t.time "time_slot", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "user_name"
+    t.string "user_name", null: false
     t.index ["coach_id"], name: "index_appointments_on_coach_id"
   end
 
   create_table "available_times", force: :cascade do |t|
     t.bigint "coach_id", null: false
-    t.integer "day_of_week"
-    t.datetime "start"
-    t.datetime "end"
+    t.integer "day_of_week", null: false
+    t.datetime "start", null: false
+    t.datetime "end", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["coach_id"], name: "index_available_times_on_coach_id"
   end
 
   create_table "coaches", force: :cascade do |t|
-    t.string "name"
-    t.string "timezone"
+    t.string "name", null: false
+    t.string "timezone", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
