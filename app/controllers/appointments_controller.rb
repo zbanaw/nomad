@@ -64,6 +64,6 @@ class AppointmentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def appointment_params
-      params.require(:appointment).permit(:coach_id, :user_id, :time_slot)
+      params.require(:appointment).permit(:coach_id, :user_name, :time_slot)
     end
 end

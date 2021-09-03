@@ -16,7 +16,7 @@ class AppointmentsTest < ApplicationSystemTestCase
 
     fill_in "Coach", with: @appointment.coach_id
     fill_in "Time slot", with: @appointment.time_slot
-    fill_in "User", with: @appointment.user_id
+    fill_in "User", with: @appointment.user_name
     click_on "Create Appointment"
 
     assert_text "Appointment was successfully created"
@@ -29,7 +29,7 @@ class AppointmentsTest < ApplicationSystemTestCase
 
     fill_in "Coach", with: @appointment.coach_id
     fill_in "Time slot", with: @appointment.time_slot
-    fill_in "User", with: @appointment.user_id
+    fill_in "User", with: @appointment.user_name
     click_on "Update Appointment"
 
     assert_text "Appointment was successfully updated"

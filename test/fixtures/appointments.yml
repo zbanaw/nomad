@@ -2,10 +2,10 @@
 
 one:
   coach: one
-  user: one
+  user_name: User1
   time_slot: 2021-09-02 16:36:30
 
 two:
   coach: two
-  user: two
+  user_name: User2
   time_slot: 2021-09-02 16:36:30
