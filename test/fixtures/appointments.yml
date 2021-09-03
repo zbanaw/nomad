@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  coach: one
+  user: one
+  time_slot: 2021-09-02 16:36:30
+
+two:
+  coach: two
+  user: two
+  time_slot: 2021-09-02 16:36:30
