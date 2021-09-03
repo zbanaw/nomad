@@ -22,6 +22,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :day_of_week, class: "form-label" %>
+    <%= form.select :day_of_week, Coach.first.available_times.all.collect { |a| [ Date::DAYNAMES[a.day_of_week], a.day_of_week ] }, {}, { class: "form-select"} %>
+  </div>
+
+  <div class="field">
     <%= form.label :time_slot, class: "form-label" %>
     <%= form.select :time_slot, AvailableTime.first.time_slot_array.map { |t| [ t, t ] }, {}, { class: "form-select"} %>
   </div>

@@ -17,6 +17,7 @@
       <tr>
         <td><%= appointment.user_name %></td>
         <td><%= appointment.coach.name %></td>
+        <td><%= appointment.day_of_week %></td>
         <td><%= appointment.time_slot.strftime("%l:%M %p") %></td>
         <td><%= link_to 'Show', appointment %></td>
         <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
